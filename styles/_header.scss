@@ -1,0 +1,44 @@
+// mobile work first workflow
+@import './variables';
+
+
+
+@mixin header-section(){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+@mixin header-btn(){
+    font-family: $fs-open;
+    font-size: clamp(0.75rem, 0.8vw, 0.8rem);
+    color: $lggt-pink-clr;
+    border: 1px solid $lggt-pink-clr;
+    background-color: $white-clr;
+    border-radius: 2rem;
+}
+
+header{
+    @include header-section();
+    padding: clamp(1.5rem, 1.8vw, 2rem) 
+    clamp(1.5rem, 1.5vw, 1.7rem);
+
+    img.header-logo{
+        aspect-ratio: 5/1;
+        max-width: 30%;
+        max-height: 80%;
+    }
+    button.header-button{
+        padding: clamp(0.3rem , 0.3vw, 0.35rem) clamp(0.9rem , 0.95vw, 1rem);
+        @include header-btn();
+
+        &:hover, :active{
+            box-shadow: 0px 15px 15px $btn-shadow;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+    }
+}
+

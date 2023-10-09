@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/* custom css reset */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+* {
+  font-size: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(1.5rem, 1.8vw, 2rem) clamp(1.5rem, 1.5vw, 1.7rem);
+}
+header img.header-logo {
+  aspect-ratio: 5/1;
+  max-width: 30%;
+  max-height: 80%;
+}
+header button.header-button {
+  padding: clamp(0.3rem, 0.3vw, 0.35rem) clamp(0.9rem, 0.95vw, 1rem);
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(0.75rem, 0.8vw, 0.8rem);
+  color: hsl(321, 100%, 78%);
+  border: 1px solid hsl(321, 100%, 78%);
+  background-color: #FFFFFF;
+  border-radius: 2rem;
+}
+header button.header-button:hover, header button.header-button :active {
+  box-shadow: 0px 15px 15px rgba(67, 61, 70, 0.2);
+  transition: all 0.5s;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+  font-weight: 700;
+}
+
+.background-img-grow-wrapper-top picture, background-img-grow-wrapper-bottom picture {
+  position: relative;
+  left: 0;
+  right: 0;
+  background-position: center center;
+}
+.background-img-grow-wrapper-top picture img, background-img-grow-wrapper-bottom picture img {
+  position: relative;
+  left: 0;
+  right: 0;
+  background-position: center center;
+}
+
+section#home {
+  margin-top: clamp(4.5rem, 5.5vw, 5.5rem);
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(4rem, 4.5vw, 4.5rem);
+}
+section#home .heading-section-text {
+  display: grid;
+  row-gap: 2.5rem;
+}
+section#home .heading-section-text h1 {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  padding: 0rem clamp(1.5rem, 1.5vw, 1.7rem);
+  text-align: center;
+  line-height: 2rem;
+}
+section#home .heading-section-text p.company-purpose-text {
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
+  line-height: 1.4rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+  padding: 0rem clamp(1.4rem, 1.5vw, 2rem);
+  text-align: center;
+}
+section#home .heading-section-text button.get-started-btn {
+  margin: 0 auto;
+  background-color: hsl(322, 100%, 66%);
+  color: #FFFFFF;
+  box-shadow: 0px 2px 5px hsla(321, 100%, 78%, 0.6);
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(0.85rem, 0.9vw, 0.9rem);
+  border-radius: 2.5rem;
+  padding: clamp(1rem, 1.05vw, 1.2rem) clamp(3rem, 3.3vw, 3.5rem);
+}
+section#home .heading-section-text button.get-started-btn:hover, section#home .heading-section-text button.get-started-btn :active {
+  box-shadow: 0px 15px 15px hsla(321, 100%, 78%, 0.6);
+  transition: all 0.5s;
+}
+section#home .container-for-screen-mocksup {
+  display: grid;
+  place-items: center;
+  padding: 0rem 7%;
+}
+section#home .container-for-screen-mocksup img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#home .container-com-mess {
+  display: grid;
+  place-items: center;
+  row-gap: clamp(3.5rem, 4.5vw, 4.5rem);
+}
+section#home .container-com-mess .container {
+  text-align: left;
+  display: grid;
+  row-gap: 1.5rem;
+  line-height: 1.8rem;
+}
+section#home .container-com-mess .container .image-icon-amount-container {
+  text-align: left;
+  display: grid;
+  row-gap: 0.5rem;
+  line-height: 1.2rem;
+}
+section#home .container-com-mess .container .image-icon-amount-container img.cont-icon-style {
+  max-width: 70%;
+  max-height: 55%;
+}
+section#home .container-com-mess .container .image-icon-amount-container p.amount-text-style {
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(3.5rem, 4vw, 4rem);
+  font-weight: 700;
+}
+section#home .container-com-mess .container .image-icon-amount-container p.diff-style {
+  padding: 0rem 30%;
+}
+section#home .container-com-mess .container p.com-mess-style {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+  font-family: "Open Sans", sans-serif;
+  color: hsla(192, 100%, 9%, 0.5);
+  font-size: clamp(0.9rem, 0.95vw, 1rem);
+  line-height: 1.2rem;
+}
+
+section#grow {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+  padding: 8% clamp(1.5rem, 1.8vw, 2rem) 12% clamp(1.5rem, 1.8vw, 2rem);
+  background-color: #F6FBFF;
+}
+
+section#flowing-conv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+  padding: 18% clamp(1.5rem, 1.8vw, 2rem) 30% clamp(1.5rem, 1.8vw, 2rem);
+}
+
+section#users {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+  padding: 3% clamp(1.5rem, 1.8vw, 2rem) 25% clamp(1.5rem, 1.8vw, 2rem);
+  background-color: #F6FBFF;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: clamp(1.2rem, 1.4vw, 1.5rem);
+}
+.text-section h2, .text-section h3, .text-section h4 {
+  font-size: clamp(1.3rem, 1.3vw, 1.5rem);
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+}
+.text-section .txt-style {
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+  font-size: clamp(0.85rem, 0.9vw, 1rem);
+  line-height: 1.45rem;
+}
+
+.icon-style {
+  padding: 1.5rem 8%;
+}
+
+section#ready {
+  row-gap: 2.6rem;
+  display: grid;
+  padding: 15% clamp(1.5rem, 1.8vw, 2rem) 60% clamp(1.5rem, 1.8vw, 2rem);
+}
+section#ready h4 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+  font-size: clamp(1.5rem, 1.7vw, 2rem);
+  line-height: 1.8rem;
+  line-height: 2rem;
+}
+section#ready button.ready-section-btn {
+  background-color: hsl(322, 100%, 66%);
+  color: #FFFFFF;
+  box-shadow: 0px 2px 5px hsla(321, 100%, 78%, 0.6);
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(0.85rem, 0.9vw, 0.9rem);
+  border-radius: 2.5rem;
+  margin: 0 auto;
+  padding: clamp(1rem, 1.05vw, 1.2rem) clamp(3rem, 3.3vw, 3.5rem);
+}
+section#ready button.ready-section-btn:hover, section#ready button.ready-section-btn :active {
+  box-shadow: 0px 15px 15px hsla(321, 100%, 78%, 0.6);
+  transition: all 0.5s;
+}
+
+footer {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  row-gap: 4rem;
+  background-color: #00252E;
+  padding: 10% clamp(2rem, 2.5vw, 2.5rem) 7% clamp(2rem, 2.5vw, 2.5rem);
+}
+footer .newsletter-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+footer .newsletter-section p.newsletter-header {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+}
+footer .newsletter-section p.news-text-style {
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+  color: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5rem;
+  font-size: clamp(0.9rem, 0.95vw, 0.95rem);
+}
+footer .newsletter-section form {
+  display: grid;
+  row-gap: 0.8rem;
+}
+footer .newsletter-section form label {
+  max-width: 100%;
+  max-height: auto;
+}
+footer .newsletter-section form label input {
+  width: 100%;
+  height: clamp(2.5rem, 3vw, 3.5rem);
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0rem 0rem 0rem 0.5rem;
+  font-size: clamp(0.9rem, 0.95vw, 0.95rem);
+  font-weight: 400;
+  color: hsl(192, 100%, 9%);
+  font-family: "Open Sans", sans-serif;
+}
+footer .newsletter-section form .btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+footer .newsletter-section form .btn-container button {
+  padding: 0.65rem 2.7rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 0.2rem;
+  border: none;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 0.95vw, 0.95rem);
+  background-color: hsl(322, 100%, 66%);
+  color: #FFFFFF;
+}
+footer .contact-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(2.5rem, 3vw, 3.5rem);
+}
+footer .contact-info h5 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+footer .contact-info p.footer-para-text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.85rem, 0.9vw, 0.95rem);
+  line-height: 1.3rem;
+}
+footer .contact-info address {
+  display: grid;
+  row-gap: clamp(1.5rem, 1.6vw, 1.6rem);
+}
+footer .contact-info address .same-style {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: clamp(1rem, 1.3vw, 1.5rem);
+       column-gap: clamp(1rem, 1.3vw, 1.5rem);
+}
+footer .contact-info address .same-style img.contact-icon-style {
+  aspect-ratio: 1/1;
+}
+footer .contact-info address .same-style p.email-address, footer .contact-info address .same-style p.phone-number {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.85rem, 0.9vw, 0.95rem);
+  line-height: 1.3rem;
+  font-style: normal;
+}
+footer .contact-info .social-media-icons {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: clamp(1rem, 1.2vw, 1.5rem);
+       column-gap: clamp(1rem, 1.2vw, 1.5rem);
+}
+footer .contact-info .social-media-icons i.fa-brands:hover, footer .contact-info .social-media-icons i.fa-brands :active {
+  color: hsl(322, 100%, 66%);
+}
+
+@media (min-width: 768px) {
+  header {
+    width: 100%;
+    height: 15vh;
+  }
+  header img.header-logo {
+    aspect-ratio: 5/1;
+    max-width: 35%;
+    max-height: 60%;
+  }
+  header button.header-button {
+    padding: clamp(0.5rem, 0.55vw, 0.6rem) clamp(1.5rem, 1.6vw, 1.6rem);
+    font-size: clamp(0.85rem, 0.9vw, 0.95rem);
+  }
+  section#home {
+    margin-top: clamp(6rem, 6.5vw, 7.5rem);
+  }
+  section#home .heading-section-text h1 {
+    font-size: clamp(2.8rem, 3vw, 3.3rem);
+    line-height: 2.7rem;
+  }
+  section#home .heading-section-text p.company-purpose-text {
+    font-size: clamp(1.1rem, 1.15vw, 1.2rem);
+    padding: 0rem 15%;
+    line-height: 2rem;
+  }
+  .text-section h2, .text-section h3, .text-section h4 {
+    font-size: clamp(1.5rem, 1.7vw, 2rem);
+  }
+  .text-section .txt-style {
+    font-size: clamp(1rem, 1.15vw, 1.2rem);
+  }
+  section#ready h4 {
+    font-size: clamp(2.8rem, 3vw, 3.3rem);
+    line-height: 2.8rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: clamp(3rem, 3.5vw, 4rem);
+         column-gap: clamp(3rem, 3.5vw, 4rem);
+  }
+}
+@media (min-width: 1440px) {
+  header {
+    width: 100%;
+    height: 25vh;
+    padding: clamp(2.5rem, 3vw, 3.5rem) clamp(2.5rem, 3vw, 3.5rem);
+  }
+  header img.header-logo {
+    aspect-ratio: 5/1;
+    max-width: 100%;
+    max-height: 70%;
+  }
+  header button.header-button {
+    padding: clamp(0.8rem, 0.95vw, 1rem) clamp(2.5rem, 3vw, 3rem);
+    font-size: clamp(1.1rem, 1.2vw, 1.25rem);
+  }
+  section#home {
+    margin-top: 15%;
+    row-gap: clamp(5rem, 5.5vw, 6.5rem);
+  }
+  section#home .heading-section-text {
+    row-gap: 3rem;
+  }
+  section#home .heading-section-text h1 {
+    font-size: clamp(3rem, 3.5vw, 4rem);
+    line-height: 2.7rem;
+  }
+  section#home .heading-section-text p.company-purpose-text {
+    font-size: clamp(1.3rem, 1.4vw, 1.5rem);
+    padding: 0rem 25%;
+    line-height: 2rem;
+  }
+  section#home .heading-section-text button.get-started-btn {
+    padding: clamp(1.3rem, 1.45vw, 1.6rem) clamp(5rem, 5.3vw, 5.5rem);
+    font-size: clamp(1.1rem, 1.15vw, 1.2rem);
+  }
+  section#home .container-com-mess {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 27%;
+         column-gap: 27%;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+  section#home .container-com-mess .container {
+    row-gap: clamp(1.5rem, 2vw, 2.3rem);
+    display: grid;
+    row-gap: 2.5rem;
+  }
+  section#home .container-com-mess .container .image-icon-amount-container {
+    display: grid;
+    row-gap: 2.5rem;
+  }
+  section#home .container-com-mess .container .image-icon-amount-container img.cont-icon-style {
+    max-width: 85%;
+    max-height: 85%;
+  }
+  section#home .container-com-mess .container .image-icon-amount-container p.amount-text-style {
+    font-size: clamp(5.5rem, 6vw, 6.5rem);
+  }
+  section#home .container-com-mess .container .image-icon-amount-container p.diff-style {
+    padding: 0rem;
+  }
+  section#home .container-com-mess .container p.diff-style {
+    padding: 0rem;
+  }
+  section#home .container-com-mess .container p.diff-style br {
+    display: none;
+  }
+  section#home .container-com-mess .container p.com-mess-style {
+    font-size: clamp(1.1rem, 1.15vw, 1.2rem);
+    line-height: 1.5rem;
+  }
+  section#grow, section#users {
+    display: flex;
+    flex-direction: row;
+    padding: 8% 8% 8% 8%;
+  }
+  section#flowing-conv {
+    display: flex;
+    flex-direction: row;
+    padding: 8% 8% 8% 8%;
+  }
+  .text-section {
+    text-align: left;
+  }
+  .text-section h2, .text-section h3, .text-section h4 {
+    font-size: clamp(3rem, 3.45vw, 3.5rem);
+  }
+  .text-section .txt-style {
+    font-size: clamp(0.9rem, 0.95vw, 0.95rem);
+    line-height: 1.45rem;
+  }
+  section#ready {
+    padding: 15% clamp(1.5rem, 1.8vw, 2rem) 15% clamp(1.5rem, 1.8vw, 2rem);
+  }
+  section#ready button.ready-section-btn {
+    padding: clamp(1.3rem, 1.45vw, 1.6rem) clamp(5rem, 5.3vw, 5.5rem);
+    font-size: clamp(1.1rem, 1.15vw, 1.2rem);
+  }
+  .text-section h2, .text-section h3, .text-section h4 {
+    font-size: clamp(1.5rem, 1.7vw, 2rem);
+  }
+  .text-section .txt-style {
+    font-size: clamp(1rem, 1.15vw, 1.2rem);
+  }
+  section#ready h4 {
+    font-size: clamp(2.8rem, 3vw, 3.3rem);
+    line-height: 2.8rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 30%;
+         column-gap: 30%;
+    padding: 8% 8% 8% 8%;
+  }
+  footer .newsletter-section p.newsletter-header {
+    font-size: clamp(2rem, 2.3vw, 2.5rem);
+  }
+  footer .newsletter-section p.news-text-style {
+    font-size: clamp(1.1rem, 1.15vw, 1.2rem);
+  }
+  footer .contact-info p.footer-para-text {
+    font-size: clamp(1.1rem, 1.15vw, 1.2rem);
+    line-height: 1.7rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,618 @@
+@import './variables';
+@import './reset';
+@import './header';
+
+
+// mobile first workflow
+@mixin flex(){
+    display:flex;
+    flex-direction: column;
+}
+
+@mixin flex-direction($direction){
+    display:flex;
+    flex-direction: $direction;
+}
+
+@mixin grid(){
+    display: grid;
+    place-items: center;
+}
+
+@mixin paragraph-style(){
+    font-family: $fs-pop;
+    color:$dark-cyan-clr ;
+}
+
+@mixin text-alignment($align){
+    text-align: $align;
+}
+
+@mixin line-height($value){
+    line-height: $value;
+}
+
+@mixin start-here-button(){
+    background-color: $pink-clr;
+    color: $white-clr;
+    box-shadow:0px 2px 5px $get-btn-shadow-clr;
+    border: none;
+    font-family: $fs-open;
+    font-size: clamp(0.85rem , 0.9vw, 0.9rem);
+    border-radius: 2.5rem;
+}
+
+h1,h2, h3,h4,h5{
+    font-family: $fs-pop;
+    color:$dark-cyan-clr;
+    font-weight: $fw-bold;
+}
+
+.background-img-grow-wrapper-top,background-img-grow-wrapper-bottom{
+    picture{
+        position: relative;
+        left:0;
+        right: 0;
+        background-position: center center;
+
+        img{
+            position: relative;
+            left:0;
+            right: 0;
+            background-position: center center;
+        }
+    }
+}
+
+section#home{
+    margin-top: clamp(4.5rem, 5.5vw, 5.5rem);
+    @include flex();
+    row-gap: clamp(4rem , 4.5vw , 4.5rem);
+    
+    .heading-section-text{
+        display: grid;
+        row-gap: 2.5rem;
+        h1{
+            font-size: clamp(1.5rem,2vw, 2.5rem);
+            padding: 0rem clamp(1.5rem , 1.5vw, 1.7rem);
+            @include text-alignment(center);
+            @include line-height(2rem);
+        }
+        
+        p.company-purpose-text{
+            font-size: clamp(0.9rem , 1vw, 1.2rem);
+            line-height: 1.4rem;
+            font-weight: $fw-reg;
+            @include paragraph-style();
+            padding: 0rem clamp(1.4rem, 1.5vw, 2rem);
+            @include text-alignment(center);
+        }
+
+        button.get-started-btn{
+            margin: 0 auto;
+            @include start-here-button();
+            padding: clamp(1rem , 1.05vw ,1.2rem) 
+            clamp(3rem , 3.3vw, 3.5rem);
+
+            &:hover, :active{
+                box-shadow: 0px 15px 15px $get-btn-shadow-clr;
+                transition: all 0.5s;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .container-for-screen-mocksup{
+        @include grid();
+        padding:0rem clamp(5%, 7% , 8%);
+
+        img{
+            object-fit: cover;
+        }
+
+    }
+
+    .container-com-mess{
+        display: grid;
+        place-items: center;
+        row-gap: clamp(3.5rem , 4.5vw, 4.5rem);
+        
+        .container{
+            @include text-alignment(left);
+            display: grid;
+            row-gap: 1.5rem;
+            line-height: 1.8rem;
+
+            .image-icon-amount-container{
+                @include text-alignment(left);
+                display: grid;
+                row-gap: 0.5rem;
+                line-height: 1.2rem;
+
+                img.cont-icon-style{
+                    max-width: 70%;
+                    max-height: 55%;
+                }
+    
+                p.amount-text-style{
+                    @include paragraph-style();
+                    font-family: $fs-open;
+                    font-size: clamp(3.5rem, 4vw, 4rem);
+                    font-weight: $fw-bold;
+                }
+
+                p.diff-style{
+                    padding: 0rem clamp(20%, 30%, 40%);
+                }
+    
+            }
+
+            p.com-mess-style{
+                @include text-alignment(center);
+                @include paragraph-style();
+                font-family: $fs-open;
+                color: hsla(192, 100%, 9%,0.5);
+                font-size: clamp(0.9rem, 0.95vw, 1rem);
+                line-height: 1.2rem;
+            }
+
+            
+        }
+        
+    }
+    
+}
+
+@mixin justify-center(){
+    justify-content: center;
+    align-items: center;
+}
+
+section#grow{
+    @include flex();
+    flex-direction: column-reverse;
+    @include justify-center();
+    row-gap: 3rem;
+    padding: 8% clamp(1.5rem , 1.8vw, 2rem) 12% clamp(1.5rem , 1.8vw, 2rem);
+    background-color: $section-bg-clr;  
+}
+
+section#flowing-conv{
+    @include flex();
+    @include justify-center();
+    row-gap: 3rem;
+    padding: 18% clamp(1.5rem , 1.8vw, 2rem) 30% clamp(1.5rem , 1.8vw, 2rem);
+}
+
+section#users{
+    @include flex();
+    flex-direction: column-reverse;
+    @include justify-center();
+    row-gap: 3rem;
+    padding: 3% clamp(1.5rem , 1.8vw, 2rem) 25% clamp(1.5rem , 1.8vw, 2rem);
+    background-color: $section-bg-clr;
+    
+}
+
+
+
+.text-section{
+    @include flex();
+    @include text-alignment(center);
+    row-gap: clamp(1.2rem, 1.4vw, 1.5rem);
+
+    h2, h3, h4{
+        font-size: clamp(1.3rem , 1.3vw , 1.5rem);
+        @include paragraph-style();
+
+    }
+    .txt-style{
+        @include paragraph-style();
+        font-size: clamp(0.85rem , 0.9vw, 1rem);
+        @include line-height(1.45rem)
+    }
+}
+
+.icon-style{
+    padding: 1.5rem clamp(5%, 8%, 10%);
+}
+
+section#ready{
+    row-gap: 2.6rem;
+    display: grid;
+    padding: 15% clamp(1.5rem , 1.8vw, 2rem) 60% clamp(1.5rem , 1.8vw, 2rem);
+    // background-color: red;
+    h4{
+        @include text-alignment(center);
+        @include paragraph-style();
+        font-size: clamp(1.5rem , 1.7vw, 2rem);
+        @include line-height(1.8rem);
+        line-height: 2rem;
+    }
+
+    button.ready-section-btn{
+        @include start-here-button();
+        margin: 0 auto;
+        padding: clamp(1rem , 1.05vw ,1.2rem) clamp(3rem , 3.3vw, 3.5rem);
+
+        &:hover, :active{
+            box-shadow: 0px 15px 15px $get-btn-shadow-clr;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+    }
+}
+
+
+footer{
+    color: $white-clr;
+    @include flex();
+    flex-direction: column-reverse;
+    row-gap: 4rem;
+    background-color: $footer-bg-clr;
+    padding: clamp(6%, 10%, 15%) clamp(2rem , 2.5vw, 2.5rem) 
+    clamp(5%, 7%, 10%) clamp(2rem , 2.5vw, 2.5rem);
+
+    .newsletter-section{
+        @include flex();
+        row-gap: 1.5rem;
+
+
+        p.newsletter-header{
+            font-family: $fs-pop;
+            text-transform: uppercase;
+            font-weight: $fw-semi-bold;
+            font-size: clamp(1.5rem , 1.5vw, 2rem);
+        }
+
+        p.news-text-style{
+            @include paragraph-style();
+            color: $white-clr;
+            font-family: $fs-open;
+            @include line-height(1.5rem);
+            font-size: clamp(0.9rem , 0.95vw , 0.95rem);
+        }
+
+        form{
+            display: grid;
+            row-gap: 0.8rem;
+    
+            label{
+                max-width: 100%;
+                max-height: auto;
+    
+                input{
+                    width: 100%;
+                    height:clamp(2.5rem, 3vw, 3.5rem);
+                    border: none;
+                    border-radius: 0.2rem;
+                    padding: 0rem 0rem 0rem 0.5rem;
+                    font-size: clamp(0.9rem , 0.95vw, 0.95rem);
+                    font-weight: $fw-reg;
+                    color: $dark-cyan-clr;
+                    font-family: $fs-open;
+                }
+    
+            }
+    
+            .btn-container{
+                @include flex();
+                align-items: flex-end;
+    
+                button{
+                    padding: 0.65rem 2.7rem;
+                    text-align: center;
+                    font-family: $fs-open;
+                    border-radius: 0.2rem;
+                    border: none;
+                    font-weight: $fw-semi-bold;
+                    font-size: clamp(0.9rem , 0.95vw, 0.95rem);
+                    background-color: $pink-clr;
+                    color: $white-clr;
+
+                    &:hover, :active{
+                        cursor: pointer;
+                    }
+    
+                }
+            }
+            
+        }
+
+    }
+
+    .contact-info{
+        @include flex();
+        row-gap: clamp(2.5rem , 3vw , 3.5rem);
+
+        h5{
+            @include flex();
+            text-align: left;
+        }
+        p.footer-para-text{
+            font-family: $fs-open;
+            font-weight: $fw-reg;
+            font-size: clamp(0.85rem , 0.9vw, 0.95rem);
+            line-height: 1.3rem;
+        }
+
+        address{
+            display: grid;
+            row-gap: clamp(1.5rem , 1.6vw , 1.6rem);
+            cursor: pointer;
+
+            .same-style{
+                @include flex-direction(row);
+                column-gap: clamp(1rem , 1.3vw , 1.5rem);
+
+                img.contact-icon-style{
+                    aspect-ratio: 1/1;
+                }
+
+                p.email-address, p.phone-number{
+                    font-family:$fs-open;
+                    font-weight: $fw-reg;
+                    font-size: clamp(0.85rem , 0.9vw, 0.95rem);
+                    line-height: 1.3rem;
+                    font-style: normal;
+
+                    &:hover , :active{
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+        }
+
+        .social-media-icons{
+            @include flex-direction(row);
+            column-gap: clamp(1rem , 1.2vw , 1.5rem);
+
+            i.fa-brands{
+                &:hover , :active{
+                    color: $pink-clr;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+
+}
+
+
+// tablet view design
+@media (min-width:768px) {
+    header{
+        width: 100%;
+        height: 15vh;
+
+        img.header-logo{
+            aspect-ratio: 5/1;
+            max-width: 35%;
+            max-height: 60%;
+        }
+
+        button.header-button{
+            padding: clamp(0.5rem , 0.55vw, 0.6rem) clamp(1.5rem , 1.6vw, 1.6rem);
+            font-size: clamp(0.85rem , 0.9vw,0.95rem);
+        }
+    }
+
+    section#home{
+        margin-top: clamp(6rem, 6.5vw, 7.5rem);
+
+        .heading-section-text{
+
+            h1{
+                font-size: clamp(2.8rem , 3vw , 3.3rem);
+                line-height: 2.7rem;
+                
+            }
+            p.company-purpose-text{
+                font-size: clamp(1.1rem , 1.15vw , 1.2rem);
+                padding: 0rem clamp(10% , 15% , 20%);
+                line-height: 2rem;
+            }
+        }
+    }
+    .text-section{
+        h2, h3, h4{
+            font-size: clamp(1.5rem , 1.7vw , 2rem);
+        }
+        .txt-style{
+            font-size: clamp(1rem , 1.15vw , 1.2rem);
+        }
+    }
+    section#ready{
+        h4{
+            font-size: clamp(2.8rem , 3vw , 3.3rem);
+            line-height: 2.8rem;
+        }
+    }
+    footer{
+        @include flex-direction(row);
+        column-gap: clamp(3rem , 3.5vw , 4rem);
+    }
+  
+}
+
+
+// desktop view design
+
+@media (min-width:1440px) {
+    header{
+        width: 100%;
+        height: 25vh;
+        padding: clamp(2.5rem, 3vw, 3.5rem) 
+        clamp(2.5rem, 3vw, 3.5rem);
+
+        img.header-logo{
+            aspect-ratio: 5/1;
+            max-width: 100%;
+            max-height: 70%;
+        }
+
+        button.header-button{
+            padding: clamp(0.8rem , 0.95vw, 1rem) clamp(2.5rem , 3vw, 3rem);
+            font-size: clamp(1.1rem , 1.2vw,1.25rem);
+        }
+    }
+
+    section#home{
+        margin-top: clamp(10% , 15% , 20%);
+        row-gap: clamp(5rem , 5.5vw , 6.5rem);
+
+        .heading-section-text{
+            row-gap: 3rem;
+            h1{
+                font-size: clamp(3rem , 3.5vw , 4rem);
+                line-height: 2.7rem;
+                
+            }
+            p.company-purpose-text{
+                font-size: clamp(1.3rem , 1.4vw , 1.5rem);
+                padding: 0rem clamp(20% , 25% , 30%);
+                line-height: 2rem;
+            }
+            button.get-started-btn{
+                padding: clamp(1.3rem , 1.45vw ,1.6rem) 
+                clamp(5rem , 5.3vw, 5.5rem);
+                font-size: clamp(1.1rem ,1.15vw, 1.2rem);
+            }
+        }
+        .container-com-mess{
+            @include flex-direction(row);
+            column-gap: clamp(20%, 27%, 30%);
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+
+            .container{
+                row-gap: clamp(1.5rem , 2vw , 2.3rem);
+                display: grid;
+                row-gap: 2.5rem;
+
+                .image-icon-amount-container{
+                    display: grid;
+                    row-gap: 2.5rem;
+
+                    img.cont-icon-style{
+                        max-width: 85%;
+                        max-height: 85%;
+                    }
+
+                    p.amount-text-style{
+                        font-size: clamp(5.5rem , 6vw , 6.5rem);
+                    }
+
+                    p.diff-style{
+                        padding: 0rem;
+                    }
+
+                }
+                p.diff-style{
+                    padding: 0rem;
+                    br {
+                        display: none;
+                    }
+                }
+                p.com-mess-style{
+                    font-size: clamp(1.1rem , 1.15vw , 1.2rem);
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+
+    section#grow, section#users{
+        @include flex-direction(row);
+        padding: 8% 8% 8% 8%;
+    }
+    section#flowing-conv{
+        @include flex-direction(row);
+        padding:8% 8% 8% 8%;
+    }
+
+    .text-section{
+        @include text-alignment(left);
+
+        h2, h3, h4{
+            font-size: clamp(3rem , 3.45vw , 3.5rem);
+        }
+        .txt-style{
+            font-size: clamp(0.9rem , 0.95vw , 0.95rem);
+            line-height: 1.45rem;
+        }
+    }
+    section#ready{
+        padding: 15% clamp(1.5rem , 1.8vw, 2rem) 15% clamp(1.5rem , 1.8vw, 2rem);
+
+        button.ready-section-btn{
+            padding: clamp(1.3rem , 1.45vw ,1.6rem) 
+            clamp(5rem , 5.3vw, 5.5rem);
+            font-size: clamp(1.1rem ,1.15vw, 1.2rem);
+        }
+    }
+
+    .text-section{
+        h2, h3, h4{
+            font-size: clamp(1.5rem , 1.7vw , 2rem);
+        }
+        .txt-style{
+            font-size: clamp(1rem , 1.15vw , 1.2rem);
+        }
+    }
+    section#ready{
+        h4{
+            font-size: clamp(2.8rem , 3vw , 3.3rem);
+            line-height: 2.8rem;
+        }
+    }
+    footer{
+        @include flex-direction(row);
+        column-gap: clamp(20% , 30% , 35%);
+        padding:8% 8% 8% 8%;
+
+        .newsletter-section{
+            p.newsletter-header{
+                font-size: clamp(2rem , 2.3vw, 2.5rem);
+            }
+            p.news-text-style{
+                font-size: clamp(1.1rem , 1.15vw , 1.2rem);
+            }
+        }
+
+        .contact-info{
+            p.footer-para-text{
+                font-size: clamp(1.1rem , 1.15vw , 1.2rem);
+                line-height: 1.7rem;
+            }
+
+            address{
+                
+                .same-style{
+
+                    p.email-address, p.phone-number{
+                        cursor: pointer;
+                        font-size: clamp(0.9rem 0.95vw, 0.95rem);
+                    }
+                }
+            }
+        }
+
+    }
+  
+}
+
+
+
+
+
+
+
+
+
