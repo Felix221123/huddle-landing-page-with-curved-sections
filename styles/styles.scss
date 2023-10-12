@@ -391,9 +391,9 @@ footer{
         height: 15vh;
 
         img.header-logo{
-            aspect-ratio: 5/1;
-            max-width: 35%;
-            max-height: 60%;
+            aspect-ratio: 1/1;
+            max-width: 80%;
+            max-height: 80%;
         }
 
         button.header-button{
@@ -451,9 +451,9 @@ footer{
         clamp(2.5rem, 3vw, 3.5rem);
 
         img.header-logo{
-            aspect-ratio: 5/1;
-            max-width: 100%;
-            max-height: 70%;
+            aspect-ratio: 1/1;
+            max-width: 80%;
+            max-height: 80%;
         }
 
         button.header-button{

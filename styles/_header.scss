@@ -24,10 +24,11 @@ header{
     @include header-section();
     padding: clamp(1.5rem, 1.8vw, 2rem) 
     clamp(1.5rem, 1.5vw, 1.7rem);
+    
 
     img.header-logo{
-        aspect-ratio: 5/1;
-        max-width: 30%;
+        aspect-ratio: 1/1;
+        max-width: 80%;
         max-height: 80%;
     }
     button.header-button{
